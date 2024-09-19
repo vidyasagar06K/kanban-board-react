@@ -1,0 +1,255 @@
+.ticket-card {
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+    box-shadow: 0 0 0.5rem #12121221;
+    background-color: #fff;
+}
+.ticket-card .ticket-id {
+    color: #6b6f76;
+    font-size: 0.6rem;
+    font-weight: bold;
+}
+.ticket-card .title {
+    color: #282a2f;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+.ticket-card .middle-container {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+.ticket-card .bottom-container {
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+}
+.ticket-card .tag-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid #edeff2;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem;
+}
+.ticket-card .tag-icon {
+    background-color: #bec2c8;
+    border-radius: 9999px;
+    height: 0.75rem;
+    width: 0.75rem;
+}
+.ticket-card .tag-text {
+    color: #6b6f76;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+.ticket-card .top-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.ticket-card .more-icon-container {
+    display: grid;
+    place-items: center;
+    border: 1px solid #edeff2;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem;
+}
+.ticket-card svg {
+    flex-shrink: 0;
+}
+@media screen and (max-width:700px) {
+    .ticket-card {
+        min-width: fit-content;
+    }
+}
+
+.user-badge-container {
+    display: grid;
+    place-items: center;
+    font-size: 0.5rem;
+    height: 1rem;
+    width: 1rem;
+    background-color: #2b963a;
+    color: #fff;
+    border-radius: 9999px;
+    position: relative;
+}
+
+.user-badge-container .user-status {
+    position: absolute;
+    bottom: -0.125rem;
+    right: -0.125rem;
+    border: 1px solid #fff;
+    background-color: #dfe1e4;
+    height: 0.25rem;
+    width: 0.25rem;
+    border-radius: 9999px;
+}
+
+.user-badge-container .user-status.available {
+    background-color: #e8b602;
+}
+
+.loader-container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+
+.loader-container.fullscreen {
+    height: calc(100vh - 60px); /* Header height: 60px */
+    width: 100vw;
+}
+
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    background-color: #fff;
+}
+
+.grid {
+    min-height: calc(100vh - 60px); /* Header height: 60px */
+    background-color: #f4f5f8;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 2rem;
+    padding: 1rem 2rem;
+}
+
+@media screen and (max-width:700px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+
+.display-dropdown {
+    position: relative;
+}
+.display-dropdown .dropdown-label-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    box-shadow: 0 0 0.25rem #12121242;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.display-dropdown .dropdown-label {
+    color: #282a2f;
+    font-weight: bold;
+}
+
+.display-dropdown .dropdown-content-container {
+    position: absolute;
+    top: 2.5rem;
+    padding: 1.25rem 1.5rem;
+    border-radius: 1rem;
+    background-color: #f8f9fb;
+    box-shadow: 0 0 0.125rem #0007;
+    width: 30%;
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.display-dropdown .dropdown-content-container:not(.visible) {
+    display: none;
+}
+
+.display-dropdown .dropdown-content-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.display-dropdown .dropdown-content-label {
+    color: #8a8b8c;
+    font-weight: bold;
+}
+
+.display-dropdown select {
+    background-color: #fefffe;
+    outline: none;
+    border: 1px solid #d8d8d8;
+    border-radius: 0.25rem;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+}
+
+
+.column {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.column .column-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.column .column-header-left-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.column .column-header-right-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.column .column-title {
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.column .column-title .count {
+    margin-left: 0.5rem;
+    color: #6b6f76;
+}
+
+.column .cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;    
+}
+
+
+@media screen and (max-width:700px) {
+    .column {
+        width: calc(100vw - 4rem);
+    }
+    .column .cards-container {
+        width: 100%;
+        overflow-y: auto;
+        flex-direction: row;
+    }
+}
